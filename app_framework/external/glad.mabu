@@ -1,0 +1,13 @@
+KIND = static
+
+USES =\
+    stdc++ \
+    ../common \
+
+INCS = glad/include
+
+export INCS = glad/include
+
+OPTIONS = standard-c++/11
+
+SRCS = glad/src/glad.c

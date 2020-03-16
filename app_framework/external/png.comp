@@ -1,0 +1,6 @@
+INCS = package/$(SPEC)/include/
+
+LIBPATHS = package/$(SPEC)/lib
+
+STLIBS.release_linux,release_lumin = :libpng.a
+STLIBS.debug_linux,debug_lumin = :libpng.a

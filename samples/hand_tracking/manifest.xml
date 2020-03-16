@@ -1,0 +1,22 @@
+<manifest
+	xmlns:ml="magicleap"
+	ml:package="com.magicleap.capi.sample.hand_tracking"
+	ml:version_code="1"
+	ml:version_name="1.0">
+	<application
+		ml:visible_name="hand_tracking"
+		ml:sdk_version="1.0"
+		ml:min_api_level="1">
+		<component
+			ml:name="hand_tracking"
+			ml:visible_name="hand_tracking"
+			ml:binary_name="bin/hand_tracking"
+			ml:type="Fullscreen">
+		        <icon ml:model_folder="Empty" ml:portal_folder="Empty" />
+		</component>
+		<uses-privilege ml:name="ControllerPose"/>
+		<uses-privilege ml:name="LowLatencyLightwear"/>
+		<uses-privilege ml:name="GesturesConfig"/>
+		<uses-privilege ml:name="GesturesSubscribe"/>
+	</application>
+</manifest>

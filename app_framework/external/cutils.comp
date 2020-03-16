@@ -1,0 +1,8 @@
+INCS = \
+    cutils/include/
+
+LIBPATHS = \
+    cutils/libcutils_intermediates/
+
+STLIBS = \
+    :libcutils.a

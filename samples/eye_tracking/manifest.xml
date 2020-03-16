@@ -1,0 +1,19 @@
+<manifest
+	xmlns:ml="magicleap"
+	ml:package="com.magicleap.capi.sample.eye_tracking"
+	ml:version_code="1"
+	ml:version_name="1.0">
+	<application
+		ml:visible_name="eye_tracking"
+		ml:sdk_version="1.0"
+		ml:min_api_level="1">
+		<component
+			ml:name="eye_tracking"
+			ml:visible_name="eye_tracking"
+			ml:binary_name="bin/eye_tracking"
+			ml:type="Fullscreen">
+			<icon ml:model_folder="Empty" ml:portal_folder="Empty" />
+		</component>
+		<uses-privilege ml:name="LowLatencyLightwear"/>
+	</application>
+</manifest>

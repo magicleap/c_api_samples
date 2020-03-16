@@ -1,0 +1,21 @@
+<manifest
+	xmlns:ml="magicleap"
+	ml:package="com.magicleap.capi.sample.raycast"
+	ml:version_code="1"
+	ml:version_name="1.0">
+	<application
+		ml:visible_name="raycast"
+		ml:sdk_version="1.0"
+		ml:min_api_level="1">
+		<component
+			ml:name="raycast"
+			ml:visible_name="raycast"
+			ml:binary_name="bin/raycast"
+			ml:type="Fullscreen">
+			<icon ml:model_folder="Empty" ml:portal_folder="Empty" />
+		</component>
+		<uses-privilege ml:name="LowLatencyLightwear"/>
+		<uses-privilege ml:name="WorldReconstruction"/>
+		<uses-privilege ml:name="ControllerPose"/>
+	</application>
+</manifest>

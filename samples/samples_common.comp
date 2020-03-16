@@ -1,0 +1,2 @@
+OUT = BUILD/
+CXXFLAGS.linux,osx = -Wno-deprecated-declarations

@@ -1,0 +1,34 @@
+// This defines areas used with build.py/only_cpp.py -a|--area A,B,C.
+// It will confine the search for *.package files (given directory entries,
+// ending with "/"), explicit .mabu or .package files, or other area names
+// (no '.' or '/').
+{
+  "all": [
+    "samples"
+  ],
+
+  "release": [
+    "samples"
+  ],
+
+  "samples": [
+    "audio_input/",
+    "audio_output/",
+    "bluetooth/",
+    "connections/",
+    "controller/",
+    "eye_tracking/",
+    "hand_tracking/",
+    "head_tracking/",
+    "image_capture/",
+    "image_tracking/",
+    "lifecycle/",
+    "locale/",
+    "location/",
+    "meshing/",
+    "pcf/",
+    "planes/",
+    "raycast/",
+    "simple_gl_app/"
+  ]
+}

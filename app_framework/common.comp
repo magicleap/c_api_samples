@@ -1,0 +1,14 @@
+DEFS.win = ML_WINDOWS WIN32_LEAN_AND_MEAN NOGDI _USE_MATH_DEFINES
+DEFS.osx = ML_OSX
+DEFS.linux = ML_LINUX
+DEFS.lumin = ML_LUMIN
+
+OPTIONS = standard-c++/11 exceptions/on warn/on package/debuggable/on
+
+CFLAGS.debug_msvc = -MDd
+CFLAGS.release_msvc = -MD
+CXXFLAGS.debug_msvc = -MDd
+CXXFLAGS.release_msvc = -MD
+
+CFLAGS.osx=-mmacosx-version-min=10.11
+CXXFLAGS.osx=-mmacosx-version-min=10.11

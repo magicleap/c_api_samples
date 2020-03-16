@@ -1,0 +1,16 @@
+KIND = program
+
+SRCS = main.cpp
+
+DEFS = \
+    ML_DEFAULT_LOG_TAG="image_capture" \
+
+USES = \
+    ../samples_common \
+
+SHLIBS= \
+    ml_camera \
+    ml_privileges
+
+REFS = \
+    ../../app_framework/app_framework \

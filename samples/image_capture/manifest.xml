@@ -1,0 +1,21 @@
+<manifest
+	xmlns:ml="magicleap"
+	ml:package="com.magicleap.capi.sample.image_capture"
+	ml:version_code="1"
+	ml:version_name="1.0">
+	<application
+		ml:visible_name="image_capture"
+		ml:sdk_version="1.0"
+		ml:min_api_level="5">
+		<component
+			ml:name="image_capture"
+			ml:visible_name="image_capture"
+			ml:binary_name="bin/image_capture"
+			ml:type="Fullscreen">
+			<icon ml:model_folder="Empty" ml:portal_folder="Empty" />
+		</component>
+		<uses-privilege ml:name="LowLatencyLightwear"/>
+		<uses-privilege ml:name="CameraCapture"/>
+		<uses-privilege ml:name="AudioCaptureMic"/>
+	</application>
+</manifest>

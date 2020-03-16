@@ -1,0 +1,9 @@
+INCS = \
+ package/$(SPEC)/include \
+ package/$(SPEC)/include/glslang/Public \
+ package/$(SPEC)/include/SPIRV
+
+LIBPATHS = package/$(SPEC)/lib
+
+STLIBS.release_lumin = :libSPIRV.a :libglslang.a :libOGLCompiler.a :libOSDependent.a
+STLIBS.debug_lumin = :libSPIRVd.a :libglslangd.a :libOGLCompilerd.a :libOSDependentd.a

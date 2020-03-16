@@ -1,0 +1,18 @@
+INCS = package/$(SPEC)/include
+
+LIBPATHS = package/$(SPEC)/lib
+LIBPATHS.win = package/$(SPEC)/bin
+
+SHLIBS.release_win = glfw3dll
+SHLIBS.debug_win = glfw3ddll
+SHLIBS.release_osx,release_linux = glfw
+SHLIBS.debug_osx,debug_linux = glfwd
+
+DATAS.linux_debug = package/$(SPEC)/lib/$(SHARED_PREFIX)glfwd.so.3.2 : $(SPEC)/libglfwd.so.3
+DATAS.linux_release = package/$(SPEC)/lib/$(SHARED_PREFIX)glfw.so.3.2 : $(SPEC)/libglfw.so.3
+DATAS.osx_debug = package/$(SPEC)/lib/$(SHARED_PREFIX)glfwd.3.dylib : $(SPEC)/
+DATAS.osx_release = package/$(SPEC)/lib/$(SHARED_PREFIX)glfw.3.dylib : $(SPEC)/
+DATAS.win_debug = package/$(SPEC)/lib/$(SHARED_PREFIX)glfw3d.dll : $(SPEC)/
+DATAS.win_release = package/$(SPEC)/lib/$(SHARED_PREFIX)glfw3.dll : $(SPEC)/
+
+LDFLAGS.osx = -rpath @executable_path/

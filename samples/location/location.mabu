@@ -1,0 +1,16 @@
+KIND = program
+
+SRCS = main.cpp
+
+DEFS = \
+    ML_DEFAULT_LOG_TAG="location" \
+
+SHLIBS = \
+    ml_location \
+    ml_privileges
+
+USES = \
+    ../samples_common \
+
+REFS = \
+    ../../app_framework/app_framework \

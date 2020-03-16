@@ -1,0 +1,19 @@
+KIND = program
+
+SRCS = main.cpp
+
+DEFS = \
+    ML_DEFAULT_LOG_TAG="bluetooth" \
+
+USES = \
+    ../samples_common \
+
+REFS = \
+    ../../app_framework/app_framework \
+
+SHLIBS = \
+  ml_privileges \
+  ml_bluetooth_adapter \
+  ml_bluetooth_le \
+  ml_bluetooth_gatt \
+

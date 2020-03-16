@@ -1,0 +1,21 @@
+INCS = package/$(SPEC)/include
+
+LIBPATHS = package/$(SPEC)/lib
+LIBPATHS.win = package/$(SPEC)/bin
+
+STLIBS.release_win = shlwapi
+STLIBS.debug_win = shlwapi
+
+SHLIBS.release_win,release_osx = gflags_nothreads
+SHLIBS.debug_win,debug_osx = gflags_nothreads_debug
+
+STLIBS.release_linux,release_lumin = :libgflags_nothreads.a
+STLIBS.debug_linux,debug_lumin = :libgflags_nothreads_debug.a
+STLIBS.linux = pthread
+
+DATAS.debug_win = package/$(SPEC)/bin/gflags_nothreads_debug.dll : $(SPEC)/
+DATAS.release_win = package/$(SPEC)/bin/gflags_nothreads.dll : $(SPEC)/
+DATAS.debug_osx = package/$(SPEC)/lib/$(SHARED_PREFIX)gflags_nothreads_debug.2.2.dylib : $(SPEC)/
+DATAS.release_osx = package/$(SPEC)/lib/$(SHARED_PREFIX)gflags_nothreads.2.2.dylib : $(SPEC)/
+
+LDFLAGS.osx = -rpath @executable_path/

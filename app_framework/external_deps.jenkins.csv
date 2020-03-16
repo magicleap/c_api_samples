@@ -1,0 +1,11 @@
+glm,external/glm-0.9.9.4.zip,https://artifactory.magicleap.com/artifactory/sdk/external/github/glm/0.9.9.4.zip,external
+glslang,external/glslang-7.12.3352.tar.gz,https://artifactory.magicleap.com/artifactory/sdk/external/github/khronosgroup/7.12.3352.tar.gz,external
+gflags,external/gflags-2.2.2.zip,https://artifactory.magicleap.com/artifactory/sdk/external/github/gflags/v2.2.2.zip,external
+glfw,external/glfw-3.2.1.zip,https://artifactory.magicleap.com/artifactory/sdk/external/github/glfw/3.2.1.zip,external
+gtest,external/gtest-1.7.0.zip,https://artifactory.magicleap.com/artifactory/sdk/external/github/googletest/release-1.7.0.zip,external
+stb,external/stb.zip,https://artifactory.magicleap.com/artifactory/sdk/external/github/stb/master.zip,external
+assimp,external/assimp-v.5.0.0.rc1.zip,https://artifactory.magicleap.com/artifactory/sdk/external/github/assimp/v.5.0.0.rc1.zip,external
+imgui,external/imgui-1.6.8.zip,https://artifactory.magicleap.com/artifactory/sdk/external/github/imgui/v1.68.zip,external
+json,external/json-3.6.1.zip,https://artifactory.magicleap.com/artifactory/sdk/external/github/nlohmann/json/v3.6.1.zip,external
+png,external/libpng-1.6.36.tar.gz,https://artifactory.magicleap.com/artifactory/sdk/external/sourceforge/libpng/libpng-1.6.36.tar.gz,external
+zlib,external/zlib-1.2.11.tar.gz,https://artifactory.magicleap.com/artifactory/sdk/external/zlib/zlib-1.2.11.tar.gz,external

@@ -1,0 +1,11 @@
+glm,external/glm-0.9.9.4.zip,https://github.com/g-truc/glm/archive/0.9.9.4.zip,external
+glslang,external/glslang-7.12.3352.tar.gz,https://github.com/KhronosGroup/glslang/archive/7.12.3352.tar.gz,external
+gflags,external/gflags-2.2.2.zip,https://github.com/gflags/gflags/archive/v2.2.2.zip,external
+glfw,external/glfw-3.2.1.zip,https://github.com/glfw/glfw/archive/3.2.1.zip,external
+gtest,external/gtest-1.7.0.zip,https://github.com/google/googletest/archive/release-1.7.0.zip,external
+stb,external/stb.zip,https://github.com/nothings/stb/archive/master.zip,external
+assimp,external/assimp-v.5.0.0.rc1.zip,https://github.com/assimp/assimp/archive/v.5.0.0.rc1.zip,external
+imgui,external/imgui-1.6.8.zip,https://github.com/ocornut/imgui/archive/v1.68.zip,external
+json,external/json-3.6.1.zip,https://github.com/nlohmann/json/archive/v3.6.1.zip,external
+png,external/libpng-1.6.36.tar.gz,https://sourceforge.net/projects/libpng/files/libpng16/1.6.36/libpng-1.6.36.tar.gz,external
+zlib,external/zlib-1.2.11.tar.gz,https://www.zlib.net/zlib-1.2.11.tar.gz,external

@@ -1,0 +1,12 @@
+KIND = program
+
+SRCS = main.cpp
+
+DEFS = \
+    ML_DEFAULT_LOG_TAG="head_tracking" \
+
+USES = \
+    ../samples_common \
+
+REFS = \
+    ../../app_framework/app_framework \

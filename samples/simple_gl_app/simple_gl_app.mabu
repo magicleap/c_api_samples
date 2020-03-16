@@ -1,0 +1,13 @@
+KIND = program
+
+SRCS = main.cpp
+
+DEFS = \
+    ML_DEFAULT_LOG_TAG="simple_gl_app" \
+
+USES = \
+    ../samples_common \
+
+REFS = \
+    ../../app_framework/app_framework \
+    ../../app_framework/external/glad \

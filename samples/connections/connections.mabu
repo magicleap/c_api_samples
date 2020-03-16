@@ -1,0 +1,16 @@
+KIND = program
+
+SRCS = main.cpp
+
+DEFS = \
+    ML_DEFAULT_LOG_TAG="connections" \
+
+USES = \
+    ../samples_common \
+
+SHLIBS =\
+    ml_privileges \
+    ml_connections
+
+REFS = \
+    ../../app_framework/app_framework \

@@ -1,0 +1,20 @@
+<manifest
+	xmlns:ml="magicleap"
+	ml:package="com.magicleap.capi.sample.controller"
+	ml:version_code="1"
+	ml:version_name="1.0">
+	<application
+		ml:visible_name="controlle"
+		ml:sdk_version="1.0"
+		ml:min_api_level="1">
+		<component
+			ml:name="controller"
+			ml:visible_name="controller"
+			ml:binary_name="bin/controller"
+			ml:type="Fullscreen">
+			<icon ml:model_folder="Empty" ml:portal_folder="Empty" />
+		</component>
+		<uses-privilege ml:name="ControllerPose"/>
+		<uses-privilege ml:name="LowLatencyLightwear"/>
+	</application>
+</manifest>

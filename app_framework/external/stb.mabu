@@ -1,0 +1,13 @@
+KIND=static
+
+USES=\
+    stdc++ \
+    ../common \
+
+INCS=stb-master/
+
+export INCS=stb-master/
+
+SRCS=stb_lib/stblib.cpp
+
+CXXFLAGS.clang=-Wno-parentheses-equality

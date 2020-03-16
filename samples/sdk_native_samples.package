@@ -1,0 +1,36 @@
+#
+# This package defines the distribution layout content for SDK Native Samples
+#
+
+OUT = dist/sdk_native_samples
+
+OPTIONS = package/useHardLinks/off
+
+DATAS= \
+  # \
+  # common binaries \
+  # \
+  BUILD/$(SPEC)/audio_input$(PROGRAM_EXT)              : native_samples/ \
+  BUILD/$(SPEC)/audio_output$(PROGRAM_EXT)             : native_samples/ \
+  BUILD/$(SPEC)/bluetooth$(PROGRAM_EXT)                : native_samples/ \
+  BUILD/$(SPEC)/controller$(PROGRAM_EXT)               : native_samples/ \
+  BUILD/$(SPEC)/eye_tracking$(PROGRAM_EXT)             : native_samples/ \
+  BUILD/$(SPEC)/hand_tracking$(PROGRAM_EXT)            : native_samples/ \
+  BUILD/$(SPEC)/head_tracking$(PROGRAM_EXT)            : native_samples/ \
+  BUILD/$(SPEC)/image_capture$(PROGRAM_EXT)            : native_samples/ \
+  BUILD/$(SPEC)/image_tracking$(PROGRAM_EXT)           : native_samples/ \
+  BUILD/$(SPEC)/lifecycle$(PROGRAM_EXT)                : native_samples/ \
+  BUILD/$(SPEC)/locale$(PROGRAM_EXT)                   : native_samples/ \
+  BUILD/$(SPEC)/location$(PROGRAM_EXT)                 : native_samples/ \
+  BUILD/$(SPEC)/meshing$(PROGRAM_EXT)                  : native_samples/ \
+  BUILD/$(SPEC)/pcf$(PROGRAM_EXT)                      : native_samples/ \
+  BUILD/$(SPEC)/planes$(PROGRAM_EXT)                   : native_samples/ \
+  BUILD/$(SPEC)/raycast$(PROGRAM_EXT)                  : native_samples/ \
+  BUILD/$(SPEC)/simple_gl_app$(PROGRAM_EXT)            : native_samples/ \
+  # native test dependencies \
+  BUILD/$(SPEC)/$(SHARED_PREFIX)*$(SHARED_EXT)*        : native_samples/ \
+  BUILD/data/                                          : native_samples/data/ \
+  # \
+  # device mpks \
+  # \
+  BUILD/com.magicleap.capi.sample.*.mpk                : device_samples/ \

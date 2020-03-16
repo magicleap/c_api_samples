@@ -1,0 +1,2 @@
+INCS = glm-0.9.9.4
+DEFS = GLM_FORCE_CTOR_INIT=1

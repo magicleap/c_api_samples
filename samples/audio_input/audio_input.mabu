@@ -1,0 +1,16 @@
+KIND = program
+
+SRCS = main.cpp
+
+DEFS = \
+    ML_DEFAULT_LOG_TAG="audio_input" \
+
+USES = \
+    ../samples_common \
+
+SHLIBS= \
+    ml_audio \
+    ml_privileges
+
+REFS = \
+    ../../app_framework/app_framework \

@@ -1,0 +1,20 @@
+<manifest
+	xmlns:ml="magicleap"
+	ml:package="com.magicleap.capi.sample.audio_input"
+	ml:version_code="1"
+	ml:version_name="1.0">
+	<application
+		ml:visible_name="audio_input"
+		ml:sdk_version="1.0"
+		ml:min_api_level="7">
+		<component
+			ml:name="audio_input"
+			ml:visible_name="audio_input"
+			ml:binary_name="bin/audio_input"
+			ml:type="Fullscreen">
+			<icon ml:model_folder="Empty" ml:portal_folder="Empty" />
+		</component>
+		<uses-privilege ml:name="LowLatencyLightwear"/>
+		<uses-privilege ml:name="AudioCaptureMic"/>
+	</application>
+</manifest>

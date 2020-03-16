@@ -1,0 +1,19 @@
+<manifest
+  xmlns:ml="magicleap"
+  ml:package="com.magicleap.capi.sample.head_tracking"
+  ml:version_code="1"
+  ml:version_name="1.0">
+  <application
+    ml:visible_name="head_tracking"
+    ml:sdk_version="1.0"
+    ml:min_api_level="2">
+    <component
+      ml:name="head_tracking"
+      ml:visible_name="head_tracking"
+      ml:binary_name="bin/head_tracking"
+      ml:type="Fullscreen">
+      <icon ml:model_folder="Empty" ml:portal_folder="Empty" />
+    </component>
+    <uses-privilege ml:name="LowLatencyLightwear"/>
+  </application>
+</manifest>

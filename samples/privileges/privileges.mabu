@@ -1,0 +1,15 @@
+KIND = program
+
+SRCS = main.cpp
+
+DEFS = \
+    ML_DEFAULT_LOG_TAG="privileges" \
+
+USES = \
+    ../samples_common \
+
+SHLIBS= \
+    ml_privileges
+
+REFS = \
+    ../../app_framework/app_framework \

@@ -1,0 +1,58 @@
+#
+# Note: There is no guarantee that the app_framework will remain
+# backwards compatible between Lumin SDK releases.
+#
+KIND = static_shared
+
+INCS = \
+    include \
+    include/app_framework/render \
+
+export INCS = \
+    include \
+
+SRCS = \
+    src/application.cpp \
+    src/cli_args_parser.cpp \
+    src/convert.cpp \
+    src/node.cpp \
+    src/gui.cpp \
+    src/render/program.cpp \
+    src/render/geometry_program.cpp \
+    src/render/material.cpp \
+    src/render/renderer.cpp \
+    src/render/buffer.cpp \
+    src/render/variable.cpp \
+    src/render/mesh.cpp \
+    src/render/texture.cpp \
+    src/render/render_target.cpp \
+    src/registry.cpp \
+    src/resource_pool.cpp \
+    src/input/ml_input_handler.cpp \
+    src/input/input_command_handler.cpp \
+
+SRCS.lumin = src/device/graphics_context.cpp
+SRCS.win,osx,linux = src/host/graphics_context.cpp
+
+DEFS = ML_DEFAULT_LOG_TAG="app_framework"
+DEFS.win= GLFW_INCLUDE_NONE=1 ML_USE_HIGH_PERFORMANCE_GPU=1
+DEFS.osx,linux = GLFW_INCLUDE_NONE=1
+
+CXXFLAGS.linux,osx = -Wno-deprecated-declarations
+
+USES = \
+    common \
+    ml_sdk \
+    OpenGL \
+    stdc++ \
+    external/assimp \
+    external/gflags \
+    external/glm \
+
+USES.win,osx,linux = \
+    external/glfw \
+
+REFS = \
+    external/glad \
+    external/imgui \
+    external/stb \

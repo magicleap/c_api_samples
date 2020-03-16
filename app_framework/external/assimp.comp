@@ -1,0 +1,19 @@
+INCS = package/$(SPEC)/include
+
+LIBPATHS = package/$(SPEC)/lib
+LIBPATHS.win = package/$(SPEC)/bin
+
+SHLIBS.release_win = assimp-vc140-mt
+SHLIBS.debug_win = assimp-vc140-mtd
+SHLIBS.release_osx,release_linux,release_lumin = assimp IrrXML z
+SHLIBS.debug_osx,debug_linux,debug_lumin = assimpd IrrXMLd z
+
+DATAS.linux_debug = package/$(SPEC)/lib/$(SHARED_PREFIX)assimpd.so.4.1.0 : $(SPEC)/libassimpd.so.4
+DATAS.linux_release = package/$(SPEC)/lib/$(SHARED_PREFIX)assimp.so.4.1.0 : $(SPEC)/libassimp.so.4
+DATAS.osx_debug = package/$(SPEC)/lib/$(SHARED_PREFIX)assimpd.4.dylib : $(SPEC)/
+DATAS.osx_release = package/$(SPEC)/lib/$(SHARED_PREFIX)assimp.4.dylib : $(SPEC)/
+DATAS.lumin_debug = package/$(SPEC)/lib/$(SHARED_PREFIX)assimpd.so.4 : bin/
+DATAS.lumin_release = package/$(SPEC)/lib/$(SHARED_PREFIX)assimp.so.4 : bin/
+DATAS.win = package/$(SPEC)/bin/$(SHARED_PREFIX)assimp*$(SHARED_EXT)* : $(SPEC)/
+
+LDFLAGS.osx = -rpath @executable_path/
