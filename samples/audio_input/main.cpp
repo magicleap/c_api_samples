@@ -117,7 +117,7 @@ private:
     if (pcm_buffer_.size() < kMaxBufferSize) {
       auto old_size = pcm_buffer_.size();
       pcm_buffer_.resize(pcm_buffer_.size() + buffer.size);
-      std::copy_n(buffer.ptr, buffer.size, pcm_buffer_.data() + old_size);
+      memcpy(pcm_buffer_.data() + old_size, buffer.ptr, buffer.size);
     }
 
     UNWRAP_MLAudioResult(MLAudioReleaseInputBuffer(audio_input_handle_));
@@ -137,7 +137,7 @@ private:
     // ensure we do not read past the end of pcm_file_buffer_
     size_t bytes_to_copy{std::min(static_cast<size_t>(buffer.size), pcm_buffer_.size() - buffer_output_position_)};
 
-    std::copy_n(pcm_buffer_.data() + buffer_output_position_, bytes_to_copy, buffer.ptr);
+    memcpy(buffer.ptr, pcm_buffer_.data() + buffer_output_position_, bytes_to_copy);
     // if there wasn't enough pcm data to fill the buffer, zero out the rest of it to avoid crackles
     std::fill_n(buffer.ptr + bytes_to_copy, buffer.size - bytes_to_copy, 0);
     buffer_output_position_ += bytes_to_copy;

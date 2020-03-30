@@ -213,7 +213,7 @@ private:
         auto t2 = std::chrono::steady_clock::now();
         auto dscan = t2 - app->t_scan_;
         if (dscan > std::chrono::milliseconds(1000)) {
-          ML_LOG(Info, "delta scan: %lld", std::chrono::duration_cast<std::chrono::milliseconds>(dscan).count());
+          ML_LOG(Info, "delta scan: %" PRId64, static_cast<int64_t>(std::chrono::duration_cast<std::chrono::milliseconds>(dscan).count()));
           app->t_scan_ = t2;
           std::unique_lock<std::mutex> l(app->d_mtx_);
           auto it = app->led_devices_.insert(result->device);

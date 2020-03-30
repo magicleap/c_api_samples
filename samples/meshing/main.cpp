@@ -130,7 +130,7 @@ public:
 
     UNWRAP_MLRESULT(MLInputCreate(nullptr, &input_tracker_));
 
-    MLInputControllerCallbacks controller_callbacks = {};
+    MLInputControllerCallbacksEx controller_callbacks = {};
     controller_callbacks.on_touchpad_gesture_end =
         [](uint8_t controller_id, const MLInputControllerTouchpadGesture *touchpad_gesture, void *data) {
           MeshingApp *app = static_cast<MeshingApp *>(data);
@@ -166,7 +166,7 @@ public:
       }
     };
 
-    UNWRAP_MLRESULT(MLInputSetControllerCallbacks(input_tracker_, &controller_callbacks, this));
+    UNWRAP_MLRESULT(MLInputSetControllerCallbacksEx(input_tracker_, &controller_callbacks, this));
   }
 
   void OnStop() override {

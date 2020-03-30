@@ -139,7 +139,7 @@ private:
     // ensure we do not read past the end of pcm_file_buffer_
     size_t bytes_to_copy = std::min(static_cast<size_t>(buffer.size), pcm_file_buffer_.size() - buffer_position_);
 
-    std::copy_n(pcm_file_buffer_.data() + buffer_position_, bytes_to_copy, buffer.ptr);
+    memcpy(buffer.ptr, pcm_file_buffer_.data() + buffer_position_, bytes_to_copy);
     buffer_position_ += buffer.size;
     buffer_position_ %= pcm_file_buffer_.size();
     UNWRAP_MLAudioResult(MLAudioReleaseOutputBuffer(audio_handle_));

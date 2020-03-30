@@ -5,6 +5,8 @@ SRCS = main.cpp
 DEFS = \
     ML_DEFAULT_LOG_TAG="hand_tracking" \
 
+CXXFLAGS.linux,osx,lumin = -Wno-deprecated-declarations
+
 USES = \
     ../samples_common \
 
