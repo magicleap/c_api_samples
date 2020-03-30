@@ -60,7 +60,7 @@ public:
     UNWRAP_MLRESULT(MLHeadTrackingGetStaticData(head_tracker_, &head_static_data_));
     UNWRAP_MLRESULT(MLHandTrackingCreate(&hand_tracker_));
     controller_configuration_ = {false, true, true};  // enable 6dof
-    UNWRAP_MLRESULT(MLControllerCreate(controller_configuration_, &controller_tracker_));
+    UNWRAP_MLRESULT(MLControllerCreateEx(&controller_configuration_, &controller_tracker_));
 
     memset(&config_, 0, sizeof(MLHandTrackingConfiguration));
     config_.handtracking_pipeline_enabled = FLAGS_handtracking_pipeline_enabled;
