@@ -30,6 +30,10 @@
 #include <thread>
 #include <vector>
 
+#ifdef ML_LUMIN
+#include <sys/system_properties.h>
+#endif
+
 DEFINE_bool(TestBool, true, "gflags test bool");
 DEFINE_int32(TestInt32, 1, "gflags test int32");
 
@@ -100,6 +104,31 @@ void ParseArgs(int argc, char **argv, const char *package_name) {
 #endif  // #ifdef ML_LUMIN
 }
 
+void GetSystemProperties() {
+#ifdef ML_LUMIN
+  char build_id[PROP_VALUE_MAX] = {'\0'};
+  char build_version_release[PROP_VALUE_MAX] = {'\0'};
+  char ml_build_version_release[PROP_VALUE_MAX] = {'\0'};
+  if (__system_property_get("ro.build.id", build_id)) {
+    ML_LOG(Info, "ro.build.id: %s", build_id);
+  } else {
+    ML_LOG(Info, "no ro.build.id");
+  }
+
+  if (__system_property_get("ro.build.version.release", build_version_release)) {
+    ML_LOG(Info, "ro.build.version.release (LuminOS Version): %s", build_version_release);
+  } else {
+    ML_LOG(Info, "no ro.build.version.release (LuminOS Version)");
+  }
+
+  if (__system_property_get("ro.ml.build.version.release", ml_build_version_release)) {
+    ML_LOG(Info, "ro.ml.build.version.release (API Level): %s", ml_build_version_release);
+  } else {
+    ML_LOG(Info, "no ro.ml.build.version.release (API Level)");
+  }
+#endif
+}
+
 int main(int argc, char **argv) {
   MLLifecycleCallbacksEx lifecycle_callbacks = {};
   MLLifecycleCallbacksExInit(&lifecycle_callbacks);
@@ -124,6 +153,9 @@ int main(int argc, char **argv) {
   ML_LOG(Info, "tmp_dir_path: %s", self_info->tmp_dir_path);
   ML_LOG(Info, "visible_name: %s", self_info->visible_name);
   ML_LOG(Info, "writable_dir_path_locked_and_unlocked: %s", self_info->writable_dir_path_locked_and_unlocked);
+
+  // get system properties
+  GetSystemProperties();
 
   // initialize perception system
   MLPerceptionSettings perception_settings;
