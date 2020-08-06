@@ -329,6 +329,11 @@ private:
           ImGui::SameLine();
         }
       }
+      ImGui::NewLine();
+      // Exit button to close the app
+      if (ImGui::Button("Exit")) {
+        StopApp();
+      }
     }
     ImGui::End();
     ml::app_framework::Gui::GetInstance().EndUpdate();
